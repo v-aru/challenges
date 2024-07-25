@@ -5,14 +5,42 @@
 }
 
 body {
-  font-family: system-ui;
+  background-color: papayawhip;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1000px;
+  margin: auto;
+}
+
+header {
+  background-color: yellowgreen;
+  text-align: center;
+  font-size: 30px;
+  margin: 50px;
+}
+
+.main-content {
+  margin-top: 50px;
+}
+
+section {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+div {
+  display: inline-block;
 }
 
 /* put a selector here to select div elements (see index.html) */
-SELECTOR HERE {
+#pinkbox {
   font-family: cursive;
   padding: 8px;
-
+  height: 150px;
+  width: 150px;
+  background-color: hotpink;
+  color: white;
+  border-radius: 8px;
   /* set the height and the width of the box to 150px */
 
   /* make the background color "hotpink" */
@@ -22,4 +50,30 @@ SELECTOR HERE {
   /* can you give the box round edges with an radius of 8px? */
 
   /* ✨ feel free to experiment! */
+  
+}
+
+#redbox {
+  font-family: sans-serif;
+  font-style: italic;
+  padding: 8px;
+  height: 150px;
+  width: 150px;
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+}
+
+#btn {
+  border: black;
+  color: black;
+  padding: 10px 24px;
+  font-size: 15px;
+  background-color: cadetblue;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+#btn:hover {
+  background-color: green;
 }
