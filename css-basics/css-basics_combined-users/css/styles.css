@@ -83,6 +83,35 @@ li {
   To do so, add a "debug" class to the html element.
 */
 
+aside .user {
+  position: relative;
+  border: 2px solid lightslategray;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 lightslategray;
+  padding: 12px;
+  max-width: 250px;
+  background-color: white;
+}
+
+aside .name {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+aside .bio {
+  font-size: 12px;
+  color: darkslategray;
+  margin: 6px 0;
+}
+
+aside .location {
+  font-size: 10px;
+  font-weight: 600;
+  text-align: end;
+  margin: 0;
+}
+
 /*
   Part 2
 
@@ -94,3 +123,12 @@ li {
 
   💡 You can use the display property to hide elements.
 */
+
+ul .bio {
+  display: none;
+}
+
+ul .location {
+  text-align: left;
+  color: darkslategray
+}
