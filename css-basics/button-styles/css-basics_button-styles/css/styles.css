@@ -30,19 +30,62 @@ button {
 /* Add your CSS styles below this line. Feel free to replace the comments with your code. Make sure not to put your code into the comments, because then nothing will happen. */
 
 .button1 {
+  border: 2px dotted black;
+  border-radius: 5px;
+  transition: transform 0.8s ease-in-out;
+  cursor: pointer;
   /*Style me! Change my border, set a border radius or what you want to try out. :) */
+}
+.button1:hover {
+  transform: rotate(360deg);
 }
 
 .button2 {
+  color: blueviolet;
+  background-color: yellow;
   /*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
 }
 
+.button2:hover {
+  transform: scale(2, 3);
+  background-color: blueviolet;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes rotateAndMove {
+  0% {transform: rotate(0deg);left:0px;}
+  25% {transform: rotate(20deg);left:0px;}
+  50% {transform: rotate(0deg);left:500px;}
+  55% {transform: rotate(0deg);left:500px;}
+  70% {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+  100% {transform: rotate(-360deg);left:0px;}
+}
+
 .button3 {
+  font-size: 20px;
+  font-family: fantasy;
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: expanded;
+  text-shadow: 2px 2px red;
+  transition: margin-right 2s ease-in-out .5s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
   /*Style me! You can test out changing the font, or font size, ...*/
 }
 
+.button3:hover {
+  animation: rotateAndMove 3s ease-in-out;
+}
+
 .button4 {
+  box-shadow: 10px 10px lightgray;
+  position: relative
   /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
 }
+
+
 
 /* Feel free to play around with other properties, as well. */
