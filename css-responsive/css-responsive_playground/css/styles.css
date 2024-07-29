@@ -73,14 +73,14 @@ h1 {
   height: 100px;
 }
 
-@media (min-width: 599px) {
+@media (min-width: 600px) {
   .box--two {
       width: 200px;
   }
 }
 
 /* Width changes to 400px when viewport is wider than 1199px */
-@media (min-width: 1199px) {
+@media (min-width: 1200px) {
   .box--two {
       width: 400px;
   }
