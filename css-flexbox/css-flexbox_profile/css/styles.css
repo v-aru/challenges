@@ -33,12 +33,17 @@ body {
 .profile__image {
   border-radius: 50%;
   max-width: 50%;
-  height: auto;
+  align-self: center;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .tech-stack__list {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tech-stack__list-item {
@@ -46,4 +51,9 @@ body {
   background-color: var(--primary-dark);
   color: var(--white);
   border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
 }
