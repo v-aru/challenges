@@ -62,15 +62,28 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 65%;
   height: 100px;
 }
 
 .box--two {
   background-color: lightgreen;
 
-  width: 100px;
+  width: 100%;
   height: 100px;
+}
+
+@media (min-width: 599px) {
+  .box--two {
+      width: 200px;
+  }
+}
+
+/* Width changes to 400px when viewport is wider than 1199px */
+@media (min-width: 1199px) {
+  .box--two {
+      width: 400px;
+  }
 }
 
 .box--three {
@@ -80,12 +93,32 @@ h1 {
   height: 250px;
 }
 
+@media (orientation: landscape) {
+  .box--three {
+      width: 100%; /* Set to full width or another specific width in landscape mode */
+  }
+}
+
 .box--four {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  /* background-color: #303030; */
 
   width: 100px;
   height: 100px;
 }
+
+@media (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: #303030; /* Dark mode background */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .box--four {
+    background-color: lightgray; /* Light mode background */
+  }
+}
+  
 
 .box--five {
   width: 100%;
