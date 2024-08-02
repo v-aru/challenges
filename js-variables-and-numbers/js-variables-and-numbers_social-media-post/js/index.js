@@ -10,7 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const text = "Lorem Ipsum";
+const title = "Social Media";
+const likeCount = 1000;
+const user = "lorem_ipsum";
+const isReported = true;
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +22,13 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log(text);
+console.log(title);
+console.log(likeCount);
+console.log(user);
+console.log(isReported);
 
+//As likeCount is op const stype, this will result in an error. Suggest to change to var/let
+likeCount++;
+console.log(likeCount);
 // --^-- write your code here --^--
