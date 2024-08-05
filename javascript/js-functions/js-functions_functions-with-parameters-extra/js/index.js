@@ -8,6 +8,7 @@ console.clear();
 
 function printSquare(number) {
    console.log(`The formula is: square = ${number} * ${number}`);
+   console.log(`Area of Square = ${number * number}`);
 }
 
 printSquare(3);
@@ -22,7 +23,8 @@ printSquare(5);
 // Uncomment the following function calls and implement the function printCircumference
 
 function printCircumference (radius) {
-   console.log(`The formula is: circumference = 2 * Pi * ${radius}`);
+   console.log(`The formula is: circumference = 2 * PI * radius`);
+   console.log(`Circumference of Circle = ${(2 * Math.PI * radius).toFixed(2)}`);
 }
  printCircumference(4);
  printCircumference(6);
@@ -39,6 +41,7 @@ function printCircumference (radius) {
 
 function printRectangleArea (width, length) {
    console.log(`The formula is: area = ${width} * ${length}`);
+   console.log(`Area of Rectangle = ${width * length}`);
 }
 
  printRectangleArea(5, 7);
