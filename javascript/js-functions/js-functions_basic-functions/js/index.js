@@ -9,7 +9,15 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+let bookDetails = [
+  {
+    bookTitle: "The Lord of the JavaScript",
+    bookAuthor: "Mario",
+    bookRating: 4.2,
+    bookSales: 120
+  }
+]
+//console.log(bookDetails);
 // --^-- write your code here --^--
 
 /*
@@ -25,6 +33,16 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+//Output in the form deisred
+//console.log(` Title: ${bookDetails[0].bookTitle} \n Author: ${bookDetails[0].bookAuthor} \n Rating: ${bookDetails[0].bookRating} \n Sales: ${bookDetails[0].bookSales}`);
+logBookData();
+
+//Changing rating and sales
+bookDetails[0].bookRating = 4.3;
+bookDetails[0].bookSales = 500;
+
+logBookData();
+//console.log(` Title: ${bookDetails[0].bookTitle} \n Author: ${bookDetails[0].bookAuthor} \n Rating: ${bookDetails[0].bookRating} \n Sales: ${bookDetails[0].bookSales}`);
 
 // --^-- write your code here --^--
 
@@ -37,5 +55,14 @@ Then log all variables to the console again.
 */
 
 // --v-- write your code here --v--
+function logBookData () {
+  console.log(` Title: ${bookDetails[0].bookTitle} \n Author: ${bookDetails[0].bookAuthor} \n Rating: ${bookDetails[0].bookRating} \n Sales: ${bookDetails[0].bookSales}`);
+}
+
+bookDetails[0].bookSales = 600;
+logBookData();
+
+bookDetails[0].bookSales = 700;
+logBookData();
 
 // --^-- write your code here --^--
