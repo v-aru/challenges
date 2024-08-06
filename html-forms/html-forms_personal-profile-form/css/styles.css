@@ -37,6 +37,7 @@ input[type="color"] {
   margin: auto;
 }
 
+
 legend {
   background-color: var(--white);
   color: var(--primary);
@@ -49,4 +50,11 @@ select {
   background-color: var(--primary);
   color: var(--white);
   border-radius: 5px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  width:100%;
+  background-color: var(--primary);
+  color: var(--white);
 }
