@@ -76,7 +76,7 @@ spinButton.addEventListener("click", async () => {
     } else if (maximumCount == 2) {
       newPoints = 10;
     }
-    result.setResults(newPoints);
+    result.setResult(newPoints);
 
   } catch (error) {
     result.setMachineChoked();
