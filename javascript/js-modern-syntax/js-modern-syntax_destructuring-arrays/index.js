@@ -48,7 +48,7 @@ export const [student1, [student2, student3], [student4, student5]] = nestedStud
 
 const values = [1, 6, 7, 9, 12, 5, 4];
 
-export const result = add(1, 6, 7, 9, 12, 5, 4); // Spread values inside this function call
+export const result = add(...values); // Spread values inside this function call
 
 function add(...values) {
   return values.reduce(
