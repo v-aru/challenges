@@ -13,6 +13,12 @@ const person = {
   phone: "12345",
 };
 
+const { age, ...contact } = person;
+const { name, email, phone } = contact;
+export { age, contact };
+console.log("Age is: ", age);
+console.log("Contact info is: ", contact);
+
 // example: export const {value 1} = myObject;
 
 // EXERCISE 2
@@ -20,6 +26,8 @@ const person = {
 // all other items should go into a variable called "restOfList".
 
 const list = ["one", "two", "three", "four", "five"];
+export const [first, second, ...restOfList] = list;
+
 
 // EXERCISE 3
 // a) The `add` function does not work because it needs an array as argument.
@@ -27,7 +35,7 @@ const list = ["one", "two", "three", "four", "five"];
 // c) Make sure you understand what the rest syntax does here.
 // d) Note that the optional chaining `?.` is used to prevent an error to happen.
 
-function add(allNumbers) {
+function add(...allNumbers) {
   return allNumbers.reduce?.((a, b) => a + b);
 }
 
@@ -39,7 +47,7 @@ export const sum = add(3, 2, 3, 2, 1, 2, 3, 4);
 // c) Make sure you understand what the spread syntax does here.
 
 const numbers = [3, 2, 1];
-export const result = add(numbers);
+export const result = add(...numbers);
 
 // EXERCISE 5
 // a) Create a variable `allFruits` which contains `anotherFruit` and `fruits`
@@ -49,3 +57,5 @@ export const result = add(numbers);
 
 const fruits = ["apple", "banana", "orange", "papaya"];
 const anotherFruit = "cherry";
+
+export const allFruits = [anotherFruit, ...fruits];
