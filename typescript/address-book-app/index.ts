@@ -20,15 +20,37 @@ interface Contact {
     addressBook = addressBook.filter((contact) => contact.id !== id);
   }
   
-  function searchContacts(query: string): Contact[] {
-    // TODO: Implement the searchContacts function
-    return addressBook.filter((contact) => {
-        const lowerQuery = query.toLowerCase();
-        return contact.name.toLowerCase().includes(lowerQuery) ||
-           contact.email?.toLowerCase().includes(lowerQuery) || 
-           (contact.phone && contact.phone.toLowerCase().includes(lowerQuery));
-  });
+  interface searchResult {
+  results: Contact[];
+  message: string;
   }
+
+  function searchContacts(query: string): searchResult {
+
+    let message = "";
+    // TODO: Implement the searchContacts function
+    if (typeof query !== 'string' || query.trim() === '') {
+      message = ("Invalid query: Query must be a non-empty string!");
+      return { results: [], message };
+      //throw new Error("Invalid query: Query must be a non-empty string!");
+    }
+
+    const queryLowerCase = query.toLowerCase();
+    const results =  addressBook.filter((contact) => {
+        return contact.name.toLowerCase().includes(queryLowerCase) ||
+           contact.email?.toLowerCase().includes(queryLowerCase) || 
+           (contact.phone && contact.phone.toLowerCase().includes(queryLowerCase));
+  });
+
+  if (query.trim() === '' && results.length === 0) {
+    message = "No contacts found matching the search query!";
+    //throw new Error("No contacts found matching the search query!");
+  } else {
+    message = `${results.length} contact(s) found.`
+  }
+
+  return {results, message};
+}
 
 
 const contact1 = {
@@ -62,11 +84,19 @@ addContact(contact3);
 addContact(contact4);
 console.log("addressBook: ", addressBook);
 
-//Searching for contacts
-console.log("Search for email with: anand111 : ", searchContacts("anand111"));
-console.log("Search for name with c++ : ", searchContacts("c++"));
+//Searching for contacts - valid
+const searchValid1 = "anand111";
+console.log(`Search for email with ${searchValid1}: ` , searchContacts(searchValid1));
+const searchValid2 = "c++";
+console.log(`Search for name with ${searchValid2}: ` ,searchContacts(searchValid2));
+
+//Searching for contacts - invalid case
+const searchInvalid1 = '     ';
+console.log(`Search for empty string: ` , searchContacts(searchInvalid1));
+const searchInvalid2 = "Andy";
+console.log(`Search for string ${searchInvalid2}: ` , searchContacts(searchInvalid2));
 
 
 //Removing contacts from addressbook 
 removeContact(3);
-console.log("Address Book now contains: ", addressBook);
+console.log("After removing an ID, the Address Book now contains: ", addressBook);
