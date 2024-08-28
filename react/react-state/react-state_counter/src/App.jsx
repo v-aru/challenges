@@ -1,7 +1,8 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
-  let count = 0;
+  let [count, setCounter] = useState(0);
 
   return (
     <div className="container">
@@ -10,7 +11,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("🤔");
+            setCounter(count--);
           }}
         >
           -
@@ -18,7 +19,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("🤔");
+            setCounter(count++);
           }}
         >
           +
